@@ -129,7 +129,8 @@ python t-sne.py
 
 **Figure 5 - Logits Distribution Comparison:**
 
-![Uploading image.png…]()
+<img width="3600" height="2700" alt="image" src="https://github.com/user-attachments/assets/4793c641-e962-44f7-a3cd-21e86ec8b9e7" />
+
 
 
 
