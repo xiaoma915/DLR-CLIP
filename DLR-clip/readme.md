@@ -13,7 +13,6 @@ DLR-CLIP (Dual-Level Refinement for Few-Shot Vision-Language Adaptation) address
 1. **Cross-Modal Adapter (CMA)**: Lightweight layer-wise adapters for both text and visual transformers that enable fine-tuning of CLIP representations for specific downstream tasks
 2. **Gate Logit Refiner (GLR)**: Asymmetric gated logit refinement with channel recalibration blocks for intelligent fusion of CLIP and CMA features
 3. **Smoothed Knowledge Distillation (SKD)**: Knowledge distillation mechanism to stabilize and improve training
-4. **Multi-scale Feature Fusion**: Combines multi-level feature representations from different network depths
 
 With its powerful visual-language alignment capability, CLIP performs well in zero-shot and few-shot learning tasks. However, CLIP's logits suffer from serious inter-class confusion problems in downstream tasks. Our DLR-CLIP method effectively learns and eliminates inter-class confusion in logits through intelligent module fusion. Experimental results show significant improvements in classification performance, especially in few-shot scenarios (1-shot, 2-shot, 4-shot, 8-shot, and 16-shot learning).
 
