@@ -177,21 +177,6 @@ python t-sne.py
 
 For dataset setup, follow instructions in [./datasets/0_dataset.md](./datasets/0_dataset.md)
 
-## Citation
-
-### BiBTeX
-
-```
-@InProceedings{Li_2025_CVPR,
-    author    = {Li, Shuo and Liu, Fang and Hao, Zehua and Wang, Xinyi and Li, Lingling and Liu, Xu and Chen, Puhua and Ma, Wenping},
-    title     = {Logits DeConfusion with CLIP for Few-Shot Learning},
-    booktitle = {Proceedings of the Computer Vision and Pattern Recognition Conference (CVPR)},
-    month     = {June},
-    year      = {2025},
-    pages     = {25411-25421}
-}
-```
-
 
 ## Project Structure
 
