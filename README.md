@@ -129,7 +129,8 @@ python t-sne.py
 
 **Figure 5 - Logits Distribution Comparison:**
 
-![Figure5](./result/vis/Figure5.png)
+![Uploading image.png…]()
+
 
 
 ## Core Modules
