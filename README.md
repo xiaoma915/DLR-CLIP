@@ -159,14 +159,6 @@ python t-sne.py
   - Alpha-based label smoothing
   - KL divergence-based loss computation
 
-### CLIP Model Extensions
-- **File**: `clip_dlr/model.py`
-- **Purpose**: Extended CLIP model with multi-scale fusion and adapter integration
-- **Features**:
-  - Multi-scale feature fusion (scale 1-4)
-  - Learnable fusion weights
-  - Integration with CMA and GLR modules
-
 ## Datasets
 
 10 evaluation datasets are supported:
