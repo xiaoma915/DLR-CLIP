@@ -42,21 +42,7 @@ _MODELS = {
 ```
 
 
-## Installation
-
-```bash
-pip install -r requirements.txt
 ```
-
-## Configuration
-
-Before running experiments, configure the following in `dlr_train.py`:
-
-* **`DATA_ROOT`**: Root directory where datasets are stored (default: `/media/yang/49f29042-389a-46e0-b8b1-94439dc013a5/data`)
-* **`MODEL_CACHE_DIR`**: Directory for cached CLIP models (default: `./model/clip`)
-* **`LOG_ROOT`**: Directory for experiment logs (default: `./result/log`)
-* **`IMAGENET_ROOT`**: Root directory for ImageNet datasets (environment variable: `IMAGENET_ROOT` or default: `/media/yang/Elements SE`)
-
 ### Training Configuration
 
 Modify parameters in `Config10Dataset` or `ConfigImageDomainShift` classes:
