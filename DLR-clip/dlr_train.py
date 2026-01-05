@@ -270,18 +270,12 @@ class Eval(object):
             with tqdm(enumerate(self.val_loader), total=len(self.val_loader), desc='Evaluate') as tqdm_eval:
                 for _, (images, labels) in tqdm_eval:
                     if hasattr(self.clip_model, 'cma_adapter_learner') and self.clip_model.cma_adapter_learner is not None and classnames is not None and template is not None:
-                        # Use CMA forward pass - replacing MAF output
+                        # Use CMA forward pass 
                         cma_logits = self.clip_model.cma_forward(images.cuda(), classnames, template)
-                        
-                        # Use cma_logits as MAF output, then pass to GLR module
-                        # Get the standard DLR forward pass but replace MAF output with CMA output
                         image_feats, _, fused_feats = self.clip_model.encode_image(images.cuda())
                         image_feats = image_feats / image_feats.norm(dim=-1, keepdim=True)
                         clip_logits = self.clip_model.logit_scale.exp() * image_feats @ self.text_feats
-                        
-                        # Replace MAF output (cma_logits) with CMA output
                         cma_logits = cma_logits
-                        
                         # --- Apply GLR (Gate Logit Refiner) ---
                         # This replaces the original simple ICD with a more sophisticated approach
                         # that includes SE-Attention and dynamic gating fusion
@@ -516,13 +510,10 @@ class Runner(object):
                     # Use CMA forward pass - replacing MAF output
                     cma_logits = self.clip_model.cma_forward(images, self.config.dataset.classnames, self.config.dataset.template)
                     
-                    # Use cma_logits as MAF output, then pass to GLR module
-                    # Get the standard DLR forward pass but replace MAF output with CMA output
+                    # Get the standard DLR forward pass
                     image_feats, _, fused_feats = self.clip_model.encode_image(images)
                     image_feats = image_feats / image_feats.norm(dim=-1, keepdim=True)
                     clip_logits = self.clip_model.logit_scale.exp() * image_feats @ self.text_feats
-                    
-                    # Replace MAF output (cma_logits) with CMA output
                     cma_logits = cma_logits
                     
                     # --- Apply GLR (Gate Logit Refiner) if enabled ---
