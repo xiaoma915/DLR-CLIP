@@ -2,7 +2,6 @@
 
 Dual-Level Refinement (DLR) with CLIP for Few-Shot Learning. This project implements advanced multi-module fusion techniques for improving CLIP performance on few-shot learning tasks through Cross-Modal Adapters (CMA), Gate Logit Refiner (GLR), and Smoothed Knowledge Distillation (SKD).
 
-Based on the code of "Logits DeConfusion with CLIP for Few-Shot Learning" (CVPR 2025), paper from [arxiv](https://arxiv.org/abs/2504.12104) or [thecvf](https://openaccess.thecvf.com/content/CVPR2025/papers/Li_Logits_DeConfusion_with_CLIP_for_Few-Shot_Learning_CVPR_2025_paper.pdf).
 
 
 ### Abstract
