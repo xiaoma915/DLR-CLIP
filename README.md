@@ -20,7 +20,8 @@ With its powerful visual-language alignment capability, CLIP performs well in ze
 
 ### Method
 
-![Overall architecture of our LDC](./result/vis/arch.png)
+![Uploading WT)E}@UT8}0%}K_ZVN3${YU.png…]()
+
 
 
 ### Data
